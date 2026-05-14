@@ -1,3 +1,4 @@
+import asyncio
 import pygame
 from constants import WIDTH, HEIGHT, FPS, BLACK
 from game_controller import GameController
@@ -8,7 +9,10 @@ class AppState:
     MENU = "MENU"
     GAME = "GAME"
 
-def main():
+def main_sync():
+    pass
+
+async def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Duy oi chay di")
@@ -97,8 +101,9 @@ def main():
         
         pygame.display.flip()
         clock.tick(FPS)
+        await asyncio.sleep(0)
 
     pygame.quit()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
