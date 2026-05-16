@@ -1,6 +1,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.pyo
+*.pyd
 .env
 .venv
 env/
@@ -9,5 +12,6 @@ ENV/
 env.bak/
 venv.bak/
 .vscode/
+.vs/
 .idea/
 *.log
